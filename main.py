@@ -74,4 +74,15 @@ class PersonInfoApp:
             "family": self.family_entry.get(),
             "age": self.age_spin.get(),
             "gender": "Female" if self.gender_var.get() == 1 else "Male",
-            "color":
+            "color": self.selected_color
+        }
+
+        print("Person Info:")
+        for key, value in data.items():
+            print(f"{key}: {value}")
+
+        messagebox.showinfo("Saved", "Information saved successfully!")
+
+
+if __name__ == "__main__":
+    PersonInfoApp()
